@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Certificate.cs" />
     <Compile Include="DataBase\Attributes.cs" />
     <Compile Include="DataBase\Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
