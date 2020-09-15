@@ -46,14 +46,13 @@
     <Compile Include="DataBase\Attributes.cs" />
     <Compile Include="DataBase\Connection.cs" />
     <Compile Include="DateAndTime.cs" />
+    <Compile Include="Documents\CPF.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="JSON.cs" />
     <Compile Include="Phone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Documents\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Documentation.txt" />
   </ItemGroup>
