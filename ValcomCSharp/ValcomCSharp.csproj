@@ -48,6 +48,7 @@
     <Compile Include="DateAndTime.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="JSON.cs" />
+    <Compile Include="Phone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
