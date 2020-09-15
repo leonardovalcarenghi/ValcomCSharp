@@ -45,10 +45,14 @@
     <Compile Include="DataBase\Attributes.cs" />
     <Compile Include="DataBase\Connection.cs" />
     <Compile Include="DateAndTime.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Documents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

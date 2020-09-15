@@ -1,0 +1,17 @@
+﻿SafeFreme - O novo LibrarySW
+.NET Framework 4.6
+
+Todos os métodos tem verificação de recebimento dos parâmetros.
+Caso tenha algum erro, a biblioteca retorna um "Exception".
+Todas as classes são estáticas, não precisam ser referenciadas.
+
+Todo o parâmetro principal deve ter o nome de "value", mas pode ser de qualquer tipo (string, int, datetime, etc...)
+
+
+Funções com parâmetro "value" em ref, são 'void'. não tem retorno.
+
+
+Sempre que possível, os métodos precisam ter sobrecargas (uma com o retorno de tipo e outra void [param ref value])
+
+
+Informações do certificado sempre retornam o valor em caixa alta.
