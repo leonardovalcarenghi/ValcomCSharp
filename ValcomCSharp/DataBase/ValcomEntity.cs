@@ -5,10 +5,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Valcom.Entity;
 
-namespace Valcom.DataBase
+namespace Valcom
 {
-    public class Connection
+    public class ValcomEntity
     {
         /// <summary>
         /// String de Conexão do Banco
@@ -40,7 +41,7 @@ namespace Valcom.DataBase
         /// </summary>
         /// <param name="connectionString">String de conexão com o banco.</param>
         /// <param name="commandText">Comando SQL</param>
-        public Connection(string connectionString, string commandText, System.Data.CommandType type = System.Data.CommandType.Text)
+        public ValcomEntity(string connectionString, string commandText, System.Data.CommandType type = System.Data.CommandType.Text)
         {
             // Setar propriedades:
             ConnectionString = connectionString;
@@ -119,12 +120,11 @@ namespace Valcom.DataBase
         {
             try
             {
-                if (obj == null) { obj = Activator.CreateInstance<T>(); }
-
-
                 SqlDataReader readDataBase = CommandSQL.ExecuteReader();
                 while (readDataBase.Read())
                 {
+                    if (obj == null) { obj = Activator.CreateInstance<T>(); }
+
                     var keys = obj.GetType().GetProperties();
                     for (int i = 0; i < keys.Length; i++)
                     {
@@ -182,7 +182,7 @@ namespace Valcom.DataBase
         }
 
 
-       
+
     }
 
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Valcom.DataBase
+namespace Valcom.Entity
 {
     /// <summary>
     /// Nome da Coluna para Leitura
