@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValcomCSharp", "ValcomCSharp.csproj", "{08C8BA93-54C2-4920-8BC9-B53985F19306}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\TestApp\TestApp.csproj", "{831240E5-47DE-467A-8F22-7F1BDEA4229F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{08C8BA93-54C2-4920-8BC9-B53985F19306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08C8BA93-54C2-4920-8BC9-B53985F19306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C8BA93-54C2-4920-8BC9-B53985F19306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
