@@ -10,8 +10,7 @@ namespace TestApp
     class Program
     {
 
-        private static string ConnectionString = @"Data Source=CUSCO\equipeinovacao; Initial Catalog=sDoc_Desenvolvimento; User ID=sDoc_App; Password=Safeweb123; Application Name=sDoc_Desenvolvimento";
-
+     
 
         static void Main(string[] args)
         {
