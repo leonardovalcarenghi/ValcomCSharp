@@ -119,6 +119,9 @@ namespace Valcom.DataBase
         {
             try
             {
+                if (obj == null) { obj = Activator.CreateInstance<T>(); }
+
+
                 SqlDataReader readDataBase = CommandSQL.ExecuteReader();
                 while (readDataBase.Read())
                 {
@@ -173,12 +176,13 @@ namespace Valcom.DataBase
         /// <summary>
         /// Leitura
         /// </summary>
-        public void Read<T>(ref T obj, bool closeConnection = true) { Read<T>(ref obj, closeConnection); }
+        public void Read<T>(ref T obj, bool closeConnection = true)
+        {
+            obj = Read<T>(obj, closeConnection);
+        }
 
 
-
-
-
+       
     }
 
 }
