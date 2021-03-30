@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Valcom.DataBase;
+using Valcom;
+using Valcom.Entity;
+using Valcom.Enums;
 
 namespace TestApp
 {
     class Program
     {
 
-     
-
         static void Main(string[] args)
         {
-            UserDTO user = null;
-            string query = "SELECT * FROM [sdoc].[Users] WHERE CPF = @CPF";
-            Connection connection = new Connection(ConnectionString, query);
-            connection.AddParameter("CPF", "03659993000");
-            connection.Read(ref user, true);
 
-            string json = Valcom.JSON.Serialize(user);
+            // Busca no Banco:
+            UserDTO user = null; // -> Pode declarar null, o ValcomEntity cria a instância caso encontre resultados no banco.
+            string query = "SELECT * FROM [sdoc].[Users] WHERE UserID = @ID";
+            entity.AddParameter("ID", "40");
+            entity.Read(ref user);
+
+            // Serializar Objeto:
+            string json = ValcomSerializer.Serialize(user);
+
+            // Desseralizar Objeto:
+            user = ValcomSerializer.Deserialize<UserDTO>(json);
+
+         
             Console.WriteLine(json);
             Console.ReadKey();
         }
