@@ -7,7 +7,10 @@ using System.Web.Script.Serialization;
 
 namespace Valcom
 {
-    public class JSON
+    /// <summary>
+    /// Serializador e Desseralizador de JSONs do Valcom.
+    /// </summary>
+    public struct ValcomSerializer
     {
         #region Serialize
 

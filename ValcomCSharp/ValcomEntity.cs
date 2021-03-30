@@ -9,7 +9,10 @@ using Valcom.Entity;
 
 namespace Valcom
 {
-    public class ValcomEntity
+    /// <summary>
+    /// Auxiliador de consultas em banco de dados utilizando modelos prontos.
+    /// </summary>
+    public struct ValcomEntity
     {
         /// <summary>
         /// String de Conexão do Banco
@@ -90,7 +93,6 @@ namespace Valcom
             var keys = obj.GetType().GetProperties();
             for (int i = 0; i < keys.Length; i++)
             {
-                var key = keys[i];
                 var keyName = keys[i].Name;
                 var propertyInfo = obj.GetType().GetProperty(keyName);
                 var value = propertyInfo.GetValue(obj, null);
@@ -116,7 +118,7 @@ namespace Valcom
         }
 
 
-        public T Read<T>(T obj, bool closeConnection = true)
+        public T Read<T>(T obj)
         {
             try
             {
@@ -155,11 +157,8 @@ namespace Valcom
                         // Boleano:
                         if (propType == typeof(bool)) { value = bool.Parse(db); }
 
-
                         // Enum:
                         if (propType == typeof(Enum)) { value = null; }
-
-                        /*to do: fazer validaão se o dado consegue fazer o pase para o tipo escolhido*/
 
                         prop.SetValue(obj, value, null);
 
@@ -170,19 +169,28 @@ namespace Valcom
 
             catch (SqlException Ex) { throw Ex; }
             catch (Exception Ex) { throw Ex; }
-            finally { if (ConnectionSQL.State == System.Data.ConnectionState.Open) { if (closeConnection) { ConnectionSQL.Close(); } } }
+            finally { if (ConnectionSQL.State == System.Data.ConnectionState.Open) { ConnectionSQL.Close(); } }
         }
 
         /// <summary>
         /// Leitura
         /// </summary>
-        public void Read<T>(ref T obj, bool closeConnection = true)
-        {
-            obj = Read<T>(obj, closeConnection);
-        }
+        public void Read<T>(ref T obj) => obj = Read<T>(obj);
 
 
 
     }
 
+}
+
+namespace Valcom.Entity
+{
+    /// <summary>
+    /// Nome da Coluna para Leitura
+    /// </summary>
+    public class ColumnNameAttribute : System.Attribute
+    {
+        public string ColumnName;
+        public ColumnNameAttribute(string value) { this.ColumnName = value; }
+    }
 }

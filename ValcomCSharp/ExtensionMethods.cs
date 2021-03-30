@@ -3,23 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Valcom.Enums;
 
 namespace Valcom
 {
+
     public static class ExtensionMethods
     {
 
         #region Strings 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static string RemoveNumbers(this string value)
-        {
-            return "";
-        }
 
         /// <summary>
         /// Remover todos os espaços espaços em branco na string.
@@ -45,7 +37,6 @@ namespace Valcom
             return sb.ToString();
         }
 
-
         /// <summary>
         /// Primeira letra em maiuscula.
         /// </summary>
@@ -68,44 +59,9 @@ namespace Valcom
             return value;
         }
 
-        public static string Reverse(this string value)
-        {
-            string result = string.Empty;
-            for (int i = 1; i <= value.Length; i++) { result += value.Substring(value.Length - i, 1); }
-            return result;
-        }
-
+     
         #endregion
-
-
-
-        #region Int 
-
-        #endregion
-
-
-
-        #region Bool 
-
-        #endregion
-
-
-
-        #region DateTime 
-
-        #endregion
-
-
-
-        #region Classes 
-
-        #endregion
-
-
-
-        #region Strings 
-
-        #endregion
+               
 
     }
 

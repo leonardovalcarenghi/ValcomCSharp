@@ -42,14 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificate.cs" />
-    <Compile Include="DataBase\Attributes.cs" />
-    <Compile Include="DataBase\ValcomEntity.cs" />
-    <Compile Include="DateAndTime.cs" />
-    <Compile Include="Documents\CPF.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ValcomEntity.cs" />
     <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="JSON.cs" />
-    <Compile Include="Phone.cs" />
+    <Compile Include="ValcomSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
