@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValcomCSharp", "ValcomCShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\TestApp\TestApp.csproj", "{831240E5-47DE-467A-8F22-7F1BDEA4229F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValcomNET5", "..\ValcomNET5\ValcomNET5.csproj", "{37171225-A5A1-4E89-855B-F526F5F8FC93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831240E5-47DE-467A-8F22-7F1BDEA4229F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37171225-A5A1-4E89-855B-F526F5F8FC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37171225-A5A1-4E89-855B-F526F5F8FC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37171225-A5A1-4E89-855B-F526F5F8FC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37171225-A5A1-4E89-855B-F526F5F8FC93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
